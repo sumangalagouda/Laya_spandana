@@ -1,0 +1,140 @@
+.navbar {
+  position: fixed;
+  top: 4px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0 2rem;
+  background: rgba(26, 10, 0, 0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.om-icon {
+  color: var(--gold);
+  font-size: 2rem;
+  text-shadow: 0 0 16px rgba(212,175,55,0.5);
+}
+
+.nav-brand h1 {
+  font-family: "Yatra One", serif;
+  font-size: 1.38rem;
+  color: var(--gold-light);
+}
+
+.nav-brand p {
+  margin: 0;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.nav-center-line {
+  color: var(--gold);
+  opacity: 0.3;
+  letter-spacing: 0.35rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s ease;
+}
+
+.nav-links a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  background: rgba(212,175,55,0.08);
+}
+
+.avatar-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  background: rgba(255,107,0,0.32);
+  color: var(--ivory);
+}
+
+.logout-btn {
+  border: 1px solid var(--saffron);
+  color: var(--saffron);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .nav-center-line {
+    display: none;
+  }
+}
+
+@media (max-width: 1220px) {
+  .nav-center-line {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 0.92rem;
+    padding: 0.34rem 0.56rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-brand p {
+    display: none;
+  }
+
+  .nav-brand h1 {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 0.35rem;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+    padding: 0.3rem 0.5rem;
+  }
+}

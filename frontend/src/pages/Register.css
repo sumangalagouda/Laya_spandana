@@ -1,0 +1,5 @@
+@import "./Login.css";
+
+.register-page .auth-card {
+  width: min(520px, 95vw);
+}

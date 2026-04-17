@@ -1,0 +1,155 @@
+.uploader {
+  position: relative;
+  border: 1px solid rgba(212,175,55,0.3);
+  background: var(--dark-2);
+  border-radius: 18px;
+  padding: 1.2rem;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.uploader::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.uploader.drag-over {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 1px rgba(240,208,96,0.4), 0 0 30px rgba(212,175,55,0.2);
+}
+
+.mandala-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0.4rem auto 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.mandala {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(212,175,55,0.45);
+}
+
+.ring-1 {
+  inset: 8px;
+  animation: spin-slow 20s linear infinite;
+}
+
+.ring-2 {
+  inset: 22px;
+  animation: spin-slow 25s linear infinite reverse;
+}
+
+.ring-3 {
+  inset: 36px;
+  animation: spin-slow 30s linear infinite;
+}
+
+.mandala-icon {
+  color: var(--gold);
+}
+
+.drop-zone {
+  text-align: center;
+  border: 1px dashed rgba(212,175,55,0.35);
+  border-radius: 14px;
+  padding: 1rem 0.7rem;
+  background: rgba(61,26,0,0.5);
+}
+
+.drop-title {
+  margin: 0;
+  color: var(--ivory);
+  font-weight: 600;
+}
+
+.drop-sub {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.selected-file {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.6rem;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 12px;
+  padding: 0.55rem 0.7rem;
+}
+
+.clear-btn {
+  background: transparent;
+  border: 1px solid var(--saffron);
+  color: var(--saffron);
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.or-divider {
+  margin: 0.95rem 0;
+  text-align: center;
+  color: var(--gold-light);
+  font-family: "Tiro Devanagari Sanskrit", serif;
+}
+
+.record-row {
+  display: flex;
+  justify-content: center;
+}
+
+.record-btn,
+.stop-btn,
+.browse-btn {
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: var(--dark-3);
+  padding: 0.55rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.stop-btn {
+  border-color: var(--deep-red);
+  color: var(--deep-red);
+}
+
+.waveform-wrap {
+  margin: 0.8rem auto;
+  display: flex;
+  gap: 0.35rem;
+  justify-content: center;
+  align-items: flex-end;
+  height: 30px;
+}
+
+.wave-bar {
+  width: 6px;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(var(--gold), var(--saffron));
+  animation: waveform 0.9s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.browse-btn {
+  margin: 0.8rem auto 0;
+  display: flex;
+}

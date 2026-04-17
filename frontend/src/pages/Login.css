@@ -1,0 +1,104 @@
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 10%, rgba(255,107,0,0.15), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(212,175,55,0.12), transparent 42%),
+    var(--dark);
+}
+
+.auth-card {
+  width: min(470px, 95vw);
+  position: relative;
+  background: var(--dark-2);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  animation: fadeInUp 0.65s ease both;
+}
+
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.auth-om {
+  text-align: center;
+  color: var(--gold);
+  font-size: 2.1rem;
+  text-shadow: 0 0 14px rgba(212,175,55,0.6);
+}
+
+.auth-card h1 {
+  text-align: center;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  color: var(--gold-light);
+  margin-top: 0.4rem;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-top: 0.15rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.auth-card form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.auth-card input {
+  border: none;
+  border-bottom: 1px solid var(--gold);
+  background: rgba(0,0,0,0.2);
+  color: var(--ivory);
+  padding: 0.7rem 0.2rem;
+  outline: none;
+}
+
+.auth-card input:focus {
+  box-shadow: 0 7px 14px -8px rgba(212,175,55,0.45);
+}
+
+.auth-card button {
+  margin-top: 0.4rem;
+  width: 100%;
+  border: 1px solid var(--gold);
+  color: var(--dark);
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  padding: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px 4px 50% 50% / 4px 4px 20px 20px;
+}
+
+.auth-card button:hover {
+  box-shadow: 0 0 22px rgba(212,175,55,0.35);
+}
+
+.auth-card button:disabled {
+  opacity: 0.75;
+}
+
+.auth-link {
+  margin: 0.95rem 0 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.auth-link a {
+  color: var(--gold);
+}
+
+.auth-error {
+  margin: 0;
+  color: var(--saffron);
+  font-weight: 500;
+}

@@ -1,0 +1,122 @@
+.history-page {
+  display: grid;
+  gap: 1.1rem;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.history-header h1 {
+  font-family: "Yatra One", serif;
+  color: var(--gold-light);
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.history-header p {
+  margin: 0.25rem 0 0;
+  color: var(--text-muted);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.stat-card {
+  border: 1px solid rgba(212,175,55,0.3);
+  border-top: 2px solid var(--stat-color);
+  border-radius: 14px;
+  background: var(--dark-2);
+  padding: 0.8rem;
+  position: relative;
+}
+
+.stat-card h3 {
+  color: var(--gold-light);
+  font-size: 2rem;
+}
+
+.stat-card p {
+  margin: 0.2rem 0;
+  color: var(--text-muted);
+}
+
+.progress {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--stat-color), transparent);
+}
+
+.records-section {
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 18px;
+  background: var(--dark-2);
+  overflow: hidden;
+}
+
+.records-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-section th,
+.records-section td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(212,175,55,0.12);
+}
+
+.records-section th {
+  color: var(--gold-light);
+}
+
+.records-section tr:hover {
+  background: rgba(212,175,55,0.08);
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.45rem;
+}
+
+.confidence-bar {
+  width: 100%;
+  height: 9px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+.confidence-bar div {
+  height: 100%;
+}
+
+.empty-state {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.empty-state span {
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .records-section {
+    overflow-x: auto;
+  }
+
+  .records-section table {
+    min-width: 680px;
+  }
+}

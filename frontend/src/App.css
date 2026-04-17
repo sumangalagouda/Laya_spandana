@@ -1,0 +1,27 @@
+.app-shell {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.page-main {
+  padding: 96px 2rem 3rem;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.auth-main {
+  padding: 1rem;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .page-main {
+    padding: 86px 1rem 2rem;
+  }
+
+  .auth-main {
+    padding: 1rem;
+  }
+}

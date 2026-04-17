@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS tala_detector;
+USE tala_detector;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(80) UNIQUE NOT NULL,
+  email VARCHAR(120) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  full_name VARCHAR(150),
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  is_active BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE IF NOT EXISTS predictions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  filename VARCHAR(255),
+  predicted VARCHAR(100) NOT NULL,
+  confidence FLOAT NOT NULL,
+  tishra_score FLOAT DEFAULT 0,
+  chatusra_score FLOAT DEFAULT 0,
+  kandam_score FLOAT DEFAULT 0,
+  audio_duration FLOAT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
